@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<body style="display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0;">
+<div class="container">
+  <form class="form">
+    <br>
+    <br>
+    <br>
+    <img src="https://cdn.bfldr.com/V5QKTUK8/at/jthx3chpmb5v4xtm7fbhc/Quest-R-White-RGB.png" class="form-logo">
+    <div class="descr">Platform Management Course Registration</div>
+
+    <!-- Options with checkboxes -->
+    <div class="question">
+      <p>Which Self-Paced Class for Platform Management would you like to register for?</p>
+      <div class="inputGroup">
+        <input id="option1" type="checkbox">
+        <label for="option1">ODM for AD Certification Class</label><br>
+        <input id="option2" type="checkbox">
+        <label for="option2">ODM for AD Certification Exam</label><br>
+        <input id="option3" type="checkbox">
+        <label for="option3">ODM for M365 Certification Class</label><br>
+        <input id="option4" type="checkbox">
+        <label for="option4">ODM for M365 Certification Exam</label><br>
+        <input id="option5" type="checkbox">
+        <label for="option5">ODM Domain Move Class</label><br>
+        <input id="option6" type="checkbox">
+        <label for="option6">ODM Domain Move Exam</label><br>
+        <input id="option7" type="checkbox">
+        <label for="option7">Migrator Pro for Active Directory Course</label><br>
+        <input id="option8" type="checkbox">
+        <label for="option8">Migrator Pro for Active Directory Exam</label><br>
+        <input id="option9" type="checkbox">
+        <label for="option9">Migrator Pro for Exchange Course</label><br>
+        <input id="option10" type="checkbox">
+        <label for="option10">Migrator Pro for Exchange Exam</label><br>
+        <input id="option11" type="checkbox">
+        <label for="option11">Archive Shuttle Course</label><br>
+        <input id="option12" type="checkbox">
+        <label for="option12">Archive Shuttle Exam</label><br>
+        <input id="option13" type="checkbox">
+        <label for="option13">Recovery Manager for AD Forest + Disaster Recovery Edition Course</label><br>
+        <input id="option14" type="checkbox">
+        <label for="option14">Recovery Manager for AD Forest + Disaster Recovery Edition Exam</label><br>
+
+      </div>
+    </div>
+    
+
+    <div class="input">
+        <input required="" autocomplete="off" type="text" id="name" maxlength="100">
+        <label for="name">First and Last Name</label>
+    </div>
+
+    <div class="input">
+        <input required="" autocomplete="off" name="email" type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="200">
+        <label for="email">Business email (Please do not use a personal address)</label>
+      
+    </div>
+
+    <div class="input">
+        <textarea required="" cols="30" rows="1" id="message" maxlength="100"></textarea>
+        <label for="message">Job Title</label>
+    </div>
+
+    <div class="input">
+      <textarea required="" cols="30" rows="1" id="company" maxlength="100"></textarea>
+      <label for="company">Company</label>
+    </div>
+    <br>
+    <br>
+    <div class="custom-select">
+      <div class="selected" id="selected-region">Click to Select Region</div>
+      <div class="options" id="region-options">
+          <div class="option">Americas</div>
+          <div class="option">EMEA</div>
+          <div class="option">APAC</div>
+          
+      </div>
+  </div>
+  
+
+    <div class="input">
+      <textarea required="" cols="30" rows="1" id="Country" maxlength="100"></textarea>
+      <label for="Country">Country</label>
+    </div>
+
+    <div class="input">
+      <textarea required="" cols="30" rows="1" id="Address" maxlength="100"></textarea>
+      <label for="Address">Address</label>
+    </div>
+
+    <div class="input">
+      <textarea required="" cols="30" rows="1" id="City" maxlength="100"></textarea>
+      <label for="City">City</label>
+    </div>
+
+    <div class="input">
+      <textarea required="" cols="30" rows="1" id="State_Province" maxlength="100"></textarea>
+      <label for="State_Province">State/Province</label>
+    </div>
+    
+    
+
+    <div class="input">
+      <textarea required="" cols="30" rows="1" id="Postal_Code" maxlength="100"></textarea>
+      <label for="Postal_Code">Postal Code</label>
+    </div>
+
+    <div class="input">
+      <textarea required="" cols="30" rows="1" id="Comments" maxlength="1000"></textarea>
+      <label for="Comments">Comments</label>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    
+    <button id="submit-btn">Submit >></button>
+    <div id="submit-message" style="display: none; color: white; font-weight: bold; margin-top: 10px;"></div>
+    
+
+  </form>
+  
+
+</div>
+
+<style>
+  .container {
+    width: 700px;
+    height: 1900px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    position: relative;
+    border-radius: 3px;
+    border: 1px solid #396afc;
+    background: linear-gradient(to right, #fb4f14, #FFAE62);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px; 
+  }
+
+.container form .descr {
+  font-size: 20px;
+  font-weight: 500;
+  color: #e8e8e8;
+  margin-bottom: 25px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-logo {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.input, textarea {
+  margin: 1em 0 1em 0;
+  width: 300px;
+  position: relative;
+}
+
+.input input, textarea {
+  font-size: 100%;
+  padding: 0.7em;
+  outline: none;
+  color: #e8e8e8;
+  border: none;
+  border-bottom: 2px solid #e8e8e8;
+  background: transparent;
+  border-radius: none;
+  width: 100%;
+  resize: none;
+}
+
+.input label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  color: #e8e8e8;
+  padding: 0.7em;
+  margin-left: 0.1em;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  text-transform: uppercase;
+}
+
+.input :is(input:focus, input:valid)~label {
+  transform: translateY(-20%) scale(.9);
+  margin: 0em;
+  padding: 0.4em;
+  background: transparent;
+}
+
+.input textarea:focus ~ label,
+.input textarea:valid ~ label {
+  transform: translateY(-50%) scale(.9);
+  margin: 0em;
+  padding: 0.4em;
+  background: transparent;
+}
+
+.inputGroup :is(input:focus, input:valid) {
+  border-color: rgb(37, 37, 211);
+}
+
+.form button {
+  color: #e8e8e8;
+  font-size: 15px;
+  align-self: flex-start;
+  padding: 0.6em;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 50px;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.form button:before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e8e8e8;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.form button:hover:before {
+  opacity: 0.2;
+}
+
+.form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.form button:active {
+  transform: scale(0.7);
+}
+
+.input select {
+  font-size: 100%;
+  padding: 0.7em;
+  outline: none;
+  color: #e8e8e8;
+  border: none;
+  border-bottom: 2px solid #e8e8e8;
+  background: transparent;
+  border-radius: none;
+  width: 100%;
+  appearance: none;
+}
+
+.input select:focus {
+  border-color: #e8e8e8;
+}
+
+.custom-select {
+    position: relative;
+    width: 200px;
+}
+
+.custom-select .selected {
+    padding: 10px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    color: #e8e8e8;
+}
+
+.custom-select .options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid #ccc;
+    background: transparent;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.7s ease-in-out;
+    pointer-events: none;
+}
+
+.custom-select .option {
+    padding: 10px;
+    cursor: pointer;
+    color: #e8e8e8;
+}
+
+.custom-select.open {
+  margin-bottom: 100px;
+}
+
+.custom-select.open .options {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+</style>
+
+<script>
+  // Create a variable to hold the timestamp of the last submission
+  var lastSubmission = 0;
+
+  document.getElementById("submit-btn").addEventListener("click", function(event){
+    event.preventDefault();
+
+    // Get the current timestamp
+    var now = Date.now();
+
+    // Check if at least 30 seconds have passed since the last submission
+    if (now - lastSubmission < 30000) {
+      document.getElementById("submit-message").innerText = "Please wait a moment before submitting again.";
+      document.getElementById("submit-message").style.display = "block";
+      return;  // Exit the function early
+    }
+
+    // Update the timestamp of the last submission
+    lastSubmission = now;
+
+    var options = [];
+    for (var i = 1; i <= 14; i++) {
+      var opt = document.querySelector("#option" + i);
+      if (opt.checked) {
+        options.push(opt.nextElementSibling.innerText);
+      }
+    }
+
+    var name = document.querySelector("#name").value;
+    var email = document.querySelector("#email").value;
+    var jobTitle = document.querySelector("#message").value;
+    var company = document.querySelector("#company").value;
+    var region = document.querySelector("#selected-region").textContent;
+    var country = document.querySelector("#Country").value;
+    var address = document.querySelector("#Address").value;
+    var city = document.querySelector("#City").value;
+    var stateProvince = document.querySelector("#State_Province").value;
+    var postalCode = document.querySelector("#Postal_Code").value;
+    var comments = document.querySelector("#Comments").value;
+
+
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      document.getElementById("submit-message").innerText = "Error: Invalid email.";
+      document.getElementById("submit-message").style.display = "block";
+      document.getElementById("submit-btn").disabled = false;
+      document.getElementById("submit-btn").innerText = "Submit";
+      return;
+    }
+
+    // Check if all fields are filled
+    if (!name || !email || !jobTitle || !company || region === 'Click to Select Region' || !country || !address || !city || !stateProvince || !postalCode || !comments || options.length === 0) {
+      document.getElementById("submit-message").innerText = "Error: All fields must be filled.";
+      document.getElementById("submit-message").style.display = "block";
+      document.getElementById("submit-btn").disabled = false;
+      document.getElementById("submit-btn").innerText = "Submit";
+      return;
+    }
+
+    // If all fields are filled, continue with form submission
+    document.getElementById("submit-btn").disabled = true;
+    document.getElementById("submit-btn").innerText = "Submitting...";
+
+    var data = {
+      options: options,
+      name: name,
+      email: email,
+      jobTitle: jobTitle,
+      company: company,
+      region: region,
+      country: country,
+      address: address,
+      city: city,
+      stateProvince: stateProvince,
+      postalCode: postalCode,
+      comments: comments
+    };
+
+    var timeout = 60000; // 60 seconds
+    var controller = new AbortController();
+    var signal = controller.signal;
+    var id = setTimeout(() => controller.abort(), timeout);
+
+    fetch('https://prod-30.westus.logic.azure.com:443/workflows/0382122a14844aa9925b89f4b1b11a3f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=IxpjFJlisAMOrwIH4xn3s4q_sZRKC-0XpM8jfTsTP0M', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data),
+      signal: signal
+    })
+    .then(response => {
+      clearTimeout(id);
+      if (response.ok) {
+        return response.text().then(function(text) {
+          return text ? JSON.parse(text) : {}
+        });
+      } else {
+        throw new Error('Server response was not ok.');
+      }
+    })
+    .then(data => {
+      console.log(data);
+      setTimeout(() => {
+        document.getElementById("submit-message").innerText = "Submitted!";
+        document.getElementById("submit-message").style.display = "block";
+        document.getElementById("submit-btn").innerText = "Submit";
+        document.getElementById("submit-btn").disabled = false;
+      }, 3000); // delay of 2 seconds
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      document.getElementById("submit-message").innerText = 'Error: ' + error.message;
+      document.getElementById("submit-message").style.display = "block";
+      document.getElementById("submit-btn").innerText = "Submit";
+      document.getElementById("submit-btn").disabled = false;
+    });
+  });
+
+  var selectedRegion = document.getElementById('selected-region');
+  var regionOptions = document.getElementById('region-options');
+  var customSelect = document.querySelector('.custom-select');
+
+  selectedRegion.addEventListener('click', function() {
+    var isClosed = regionOptions.style.opacity === '0';
+    regionOptions.style.opacity = isClosed ? '1' : '0';
+    regionOptions.style.transform = isClosed ? 'translateY(0)' : 'translateY(-20px)';
+    if (isClosed) {
+        customSelect.classList.add('open');
+    } else {
+        customSelect.classList.remove('open');
+    }
+  });
+
+  regionOptions.addEventListener('click', function(event) {
+    if (event.target.classList.contains('option')) {
+        selectedRegion.textContent = event.target.textContent;
+        regionOptions.style.opacity = '0';
+        regionOptions.style.transform = 'translateY(-20px)';
+        customSelect.classList.remove('open');
+    }
+  });
+</script>
+
+
+
+
+  
+  
+
+</body>
+</html>
